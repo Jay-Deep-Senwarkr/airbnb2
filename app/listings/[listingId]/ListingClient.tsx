@@ -10,7 +10,7 @@ import ListingInfo from "@/app/components/listings/ListingInfo";
 import useLoginModal from "@/app/hooks/useLoginModal";
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
 import axios from "axios";
-import {toast} from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import ListingReservation from "@/app/components/listings/ListingReservation";
 import { Range } from "react-date-range";
 
@@ -29,7 +29,7 @@ interface ListingClientProps {
 }
 const ListingClient: React.FC<ListingClientProps> = ({
   listing,
-  reservations = [] ,
+  reservations = [],
   currentUser,
 }) => {
   const loginModal = useLoginModal();
@@ -60,7 +60,8 @@ const ListingClient: React.FC<ListingClientProps> = ({
 
     setIsLoading(true);
 
-    axios.post('/api/reservations', {
+    axios
+      .post("/api/reservations", {
         totalPrice,
         startDate: dateRange.startDate,
         endDate: dateRange.endDate,
@@ -69,7 +70,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
       .then(() => {
         toast.success("Listing reserved!");
         setDateRange(initialDateRange);
-       router.push('/trips')
+        router.push("/trips");
       })
       .catch(() => {
         toast.error("Something went wrong.");

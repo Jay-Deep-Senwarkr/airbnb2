@@ -31,7 +31,6 @@ export async function POST(
         data: {
             reservations: {
                 create: {
-                    // this can be a reason for error
                     userId: currentUser.id,
                     startDate,
                     endDate,
