@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import { Listing, Reservation, User } from "@prisma/client";
 
 export type SafeListing = Omit<

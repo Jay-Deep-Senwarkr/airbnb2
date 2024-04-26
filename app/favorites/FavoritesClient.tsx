@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import Container from "../components/Container";
 import Heading from "../components/Heading";
 import ListingCard from "../components/listings/ListingCard";

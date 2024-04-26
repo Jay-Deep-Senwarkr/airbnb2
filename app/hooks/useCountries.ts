@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import countries from "world-countries";
 
 const formattedCountries = countries.map((country) => ({

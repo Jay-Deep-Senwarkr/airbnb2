@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import Loader from "./components/Loader";
 
 const Loading = () => {
