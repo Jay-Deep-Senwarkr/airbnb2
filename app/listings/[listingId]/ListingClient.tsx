@@ -35,6 +35,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
   const loginModal = useLoginModal();
   const router = useRouter();
   const disabledDate = useMemo(() => {
+    
     let dates: Date[] = [];
 
     reservations.forEach((reservation: any) => {
